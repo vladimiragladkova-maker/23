@@ -6,76 +6,46 @@ int main() {
 
 	setlocale(0, "");
 
+	int i1;
+	int i2;
+	int i3;
+	int i4;
+	int i5;
 	string color = "\x1b[0m";
 
 	// INT
+	cout << "Введите элементы массива: ";
+	cin >> i1 >> i2 >> i3 >> i4 >> i5;
+	int arrInt[5] = {i1, i2, i3, i4, i5};
 
-	int arrInt[5];
-
-	cout << "Введите массив: ";
-	cin >> arrInt;
+	cout << "Введите цифры через пробел: ";
 	for (int i = 0; i < 5; i++) {
-		cout << "\x1b[31m" << "| Таблица: " << i << endl;
-		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl;
-		cout << "|    Число    |           Пример            |    Результат     |" << endl;
-		cout << "|     " << arrInt[i] << "     |         " << arrInt[i] << " + " << arrInt[i] << "        |        " << arrInt[i] + arrInt[i] << "       |" << endl;
-		cout << "[ + ] arrInt[" << i << "] | значение: " << arrInt[i] << endl << endl;
+		if (i < 10) {
+			cout << endl << "\x1b[31m" << "| Таблица: " << i + 1 << endl;
+			cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl;
+			cout << "|    Число    |           Пример            |    Результат     |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " + " << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " - " << arrInt[i] << "           |        " << arrInt[i] - arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " / " << arrInt[i] << "           |        " << arrInt[i] / arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " * " << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "        |" << endl;
+		}
+		if (i >= 10 and i < 100) {
+			cout << endl << "\x1b[31m" << "| Таблица: " << i + 1 << endl;
+			cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl;
+			cout << "|    Число    |           Пример            |    Результат     |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " + " << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " - " << arrInt[i] << "           |        " << arrInt[i] - arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " / " << arrInt[i] << "           |        " << arrInt[i] / arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " * " << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "        |" << endl;
+		}
+		if (i > 100 and i < 1000) {
+			cout << endl << "\x1b[31m" << "| Таблица: " << i + 1 << endl;
+			cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl;
+			cout << "|    Число    |           Пример            |    Результат     |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " + " << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " - " << arrInt[i] << "           |        " << arrInt[i] - arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " / " << arrInt[i] << "           |        " << arrInt[i] / arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " * " << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "        |" << endl;
+		}
 	}
-
-	// SHORT
-
-	short arrShort[10] = { 1, 20, 32, 4, 1, 2, 2, 54, 23, 0 };
-	cout << "\x1b[34m" << "[ + ] МАССИВ SHORT" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrShort[" << i << "] | значение: " << arrShort[i] << endl << endl;
-	}
-
-	// LONG
-
-	long arrLong[10] = { 1000000000000, 206, 32, 449, 1678956, 277777776544324, 21223444, 54, 23, 0 };
-	cout << "\x1b[33m" << "[ + ] МАССИВ LONG" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrLong[" << i << "] | значение: " << arrLong[i] << endl << endl;
-	}
-
-	// FLOAT
-
-	float arrFloat[10] = { 1.4, 206, 32.8, 56.003, 167, 76544.324, 21.54, 33, 23, 0 };
-	cout << "\x1b[36m" << "[ + ] МАССИВ FLOAT" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrFloat[" << i << "] | значение: " << arrFloat[i] << endl << endl;
-	}
-
-	// DOUBLE
-
-	double arrDouble[10] = { 1.9999999999999, 206, 32.867854675457675, 56.003, 167, 76544.324, 2555555551.54, 33, 23, 0 };
-	cout << "\x1b[35m" << "[ + ] МАССИВ DOUBLE" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrDouble[" << i << "] | значение: " << arrDouble[i] << endl << endl;
-	}
-
-	// CHAR
-
-	char arrChar[10] = { 'a', '3', 's', 'е', 'й', '&', '#', '4', '!', '0' };
-	cout << "\x1b[33m" << "[ + ] МАССИВ CHAR" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrChar[" << i << "] | значение: " << arrChar[i] << endl << endl;
-	}
-
-	// BOOL
-
-	bool arrBool[10] = { 0, 1, 1, 1, 0, 1, 0, 1, 0, 0 };
-	cout << "\x1b[34m" << "[ + ] МАССИВ BOOL" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrBool[" << i << "] | значение: " << arrBool[i] << endl << endl;
-	}
-
-	// STRING
-
-	string arrString[10] = { "099999", "Петя", "Hello!", " 67! t", " 'Привет, Маша!' ", "Samsung", "10", "111#222rewQ5", "0" };
-	cout << "\x1b[32m" << "[ + ] МАССИВ STRING" << color << endl << endl;
-	for (int i = 0; i < 10; i++) {
-		cout << "[ + ] arrString[" << i << "] | значение: " << arrString[i] << endl << endl;
-	}
-	cout << color;
 }
