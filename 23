@@ -11,32 +11,37 @@ int main() {
 	int i3;
 	int i4;
 	int i5;
-	string color = "\x1b[0m";
-
+	string color_white = "\x1b[0m";
+	string color_red = "\x1b[31m";
 	// INT
 	cout << "Введите элементы массива: ";
 	cin >> i1 >> i2 >> i3 >> i4 >> i5;
-	int arrInt[5] = {i1, i2, i3, i4, i5};
+	int arrInt[5] = { i1, i2, i3, i4, i5 };
 
-	cout << "Введите цифры через пробел: ";
 	for (int i = 0; i < 5; i++) {
 		if (i < 10) {
-			cout << endl << "\x1b[31m" << "| Таблица: " << i + 1 << endl;
+			cout << endl << "| Таблица: " << color_red << i + 1 << color_white << endl;
 			cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl;
 			cout << "|    Число    |           Пример            |    Результат     |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " + " << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "         |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " - " << arrInt[i] << "           |        " << arrInt[i] - arrInt[i] << "         |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " / " << arrInt[i] << "           |        " << arrInt[i] / arrInt[i] << "         |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " * " << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "         |" << endl;
-		}
-		if (i >= 10 and i < 100) {
-			cout << endl << "\x1b[31m" << "| Таблица: " << i + 1 << endl;
-			cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" << endl;
-			cout << "|    Число    |           Пример            |    Результат     |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " + " << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "        |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " - " << arrInt[i] << "           |        " << arrInt[i] - arrInt[i] << "         |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " / " << arrInt[i] << "           |        " << arrInt[i] / arrInt[i] << "         |" << endl;
-			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << " * " << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "        |" << endl;
+			if (arrInt[i] + arrInt[i] < 10)
+			{
+				cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << color_red << " + " << color_white << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "         |" << endl;
+			}
+			else if (arrInt[i] + arrInt[i] >= 10)
+			{
+				cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << color_red << " + " << color_white << arrInt[i] << "           |        " << arrInt[i] + arrInt[i] << "        |" << endl;
+			}
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << color_red << " - " << color_white << arrInt[i] << "           |        " << arrInt[i] - arrInt[i] << "         |" << endl;
+			cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << color_red << " / " << color_white << arrInt[i] << "           |        " << arrInt[i] / arrInt[i] << "         |" << endl;
+			if (arrInt[i] * arrInt[i] < 10)
+			{
+				cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << color_red << " * " << color_white << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "         |" << endl;
+			}
+			else if (arrInt[i] * arrInt[i] >= 10)
+			{
+				cout << "|      " << arrInt[i] << "      |             " << arrInt[i] << color_red << " * " << color_white << arrInt[i] << "           |        " << arrInt[i] * arrInt[i] << "        |" << endl;
+			}
+			
 		}
 	}
 }
