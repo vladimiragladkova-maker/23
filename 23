@@ -13,9 +13,21 @@ int main() {
 	int i5;
 	string color_white = "\x1b[0m";
 	string color_red = "\x1b[31m";
-	// INT
-	cout << "Введите элементы массива: ";
-	cin >> i1 >> i2 >> i3 >> i4 >> i5;
+
+
+	cout << "Введите элементы массива через Enter: " << endl;
+
+	cout << "Элемент 1: ";
+	cin >> i1;
+	cout << "Элемент 2: ";
+	cin >> i2;
+	cout << "Элемент 3: ";
+	cin >> i3;
+	cout << "Элемент 4: ";
+	cin >> i4;
+	cout << "Элемент 5: ";
+	cin >> i5;
+	
 	int arrInt[5] = { i1, i2, i3, i4, i5 };
 
 	for (int i = 0; i < 5; i++) {
